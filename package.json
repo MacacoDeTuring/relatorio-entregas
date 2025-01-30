@@ -24,6 +24,7 @@
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
     "@prisma/client": "^6.2.1",
+    "json-bigint": "^1.0.0",
     "prisma": "^6.2.1"
   },
   "devDependencies": {

@@ -1,9 +1,5 @@
 import prisma from '../../database/prisma'
-
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-BigInt.prototype.toJSON = function () {
-  return this.toString()
-}
+import JSONbig from 'json-bigint'
 
 export async function getVendas(): Promise<string> {
   const vendas = await prisma.vendas.findMany({
@@ -12,5 +8,5 @@ export async function getVendas(): Promise<string> {
     }
   })
 
-  return JSON.stringify(vendas)
+  return JSONbig.stringify(vendas)
 }
